@@ -1,3 +1,92 @@
-<p>11
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="个人主页 - 开发者、设计师、创作者">
+    <meta name="keywords" content="开发者,设计师,作品集,个人主页">
+    <title>Liquid Glass Personal Homepage</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- 鼠标光晕效果 -->
+    <div class="cursor-light"></div>
 
-</p>
+    <!-- 导航栏 -->
+    <nav class="navbar glass">
+        <div class="logo">WANYING</div>
+        <div class="nav-links">
+            <a href="#about">关于</a>
+            <a href="#works">作品</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section class="hero">
+        <div class="hero-card glass reveal">
+            <div class="avatar">
+                <img src="/assets/images/1775319074287~2.jpg" alt="个人头像">
+            </div>
+            <h1>婉莹</h1>
+            <p>Developer · Designer · Creator</p>
+            <div class="buttons">
+    
+                <a href="#contact" class="btn glass">联系我</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="section reveal">
+        <h2 class="section-title">关于我</h2>
+        <div class="card glass">
+            <p>
+                这里填写个人简介。支持展示技能、经历、兴趣爱好和项目经验。
+                整体采用 Apple Liquid Glass 风格设计，包含实时模糊、动态光效、
+                悬浮动画以及响应式布局。致力于创造优雅且实用的数字产品。
+            </p>
+        </div>
+    </section>
+
+    <!-- 我的作品 -->
+    <section id="works" class="section reveal">
+        <h2 class="section-title">我的作品</h2>
+        <div class="grid">
+            <div class="card glass">
+                <h3>项目一</h3>
+                <p>网站设计与开发，采用现代前端技术栈，注重用户体验与视觉设计。</p>
+            </div>
+            <div class="card glass">
+                <h3>项目二</h3>
+                <p>Android 应用开发，跨平台解决方案，提供流畅的移动体验。</p>
+            </div>
+            <div class="card glass">
+                <h3>项目三</h3>
+                <p>UI / UX 设计，以用户为中心的设计理念，创造直观的交互体验。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我 -->
+    <section id="contact" class="section reveal">
+        <div class="contact glass">
+            <h2 class="section-title">联系我</h2>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="姓名" required>
+                <input type="email" name="email" placeholder="邮箱" required>
+                <textarea name="message" placeholder="留言内容" required></textarea>
+                <button type="submit" class="btn glass">发送消息</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        © 2026 WANYING · All rights reserved
+    </footer>
+
+    <!-- 引入JavaScript文件 -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
