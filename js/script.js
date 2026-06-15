@@ -119,3 +119,88 @@ if (themeToggle) {
 if (badgeText) {
     badgeText.textContent = currentTheme === 'md3' ? 'MD3' : 'Glass';
 }
+
+const GITHUB_USER = 'exicok';
+
+async function fetchGitHubRepos() {
+    const projectsList = document.getElementById('projectsList');
+    if (!projectsList) return;
+
+    try {
+        const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`);
+        if (!res.ok) throw new Error('API limit');
+        const repos = await res.json();
+
+        const filtered = repos
+            .filter(r => !r.fork && r.name !== `${GITHUB_USER}.github.io`)
+            .sort((a, b) => b.stargazers_count - a.stargazers_count);
+
+        const totalStars = repos.reduce((sum, r) => sum + r.stargazers_count, 0);
+        const repoCount = document.getElementById('repoCount');
+        const starCount = document.getElementById('starCount');
+        if (repoCount) repoCount.textContent = filtered.length;
+        if (starCount) starCount.textContent = totalStars;
+
+        projectsList.innerHTML = '';
+        filtered.forEach(repo => {
+            const item = document.createElement('a');
+            item.className = 'project-item';
+            item.href = repo.html_url;
+            item.target = '_blank';
+            item.rel = 'noopener noreferrer';
+
+            const lang = repo.language ? `<span>${repo.language}</span>` : '';
+            const stars = repo.stargazers_count > 0
+                ? `<div class="project-stars">
+                       <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                       ${repo.stargazers_count}
+                   </div>`
+                : '';
+
+            item.innerHTML = `
+                <div class="project-header">
+                    <h3>${repo.name}</h3>
+                    <div class="project-tags">${lang}</div>
+                </div>
+                <p>${repo.description || '暂无描述'}</p>
+                ${stars}
+            `;
+            projectsList.appendChild(item);
+        });
+
+        if (filtered.length === 0) {
+            projectsList.innerHTML = '<div class="project-loading">暂无项目</div>';
+        }
+    } catch {
+        const fallback = [
+            { name: 'parcelx', lang: 'Kotlin', desc: 'ParcelX library' },
+            { name: 'AmuseAI', lang: 'C#', desc: 'UI Demo of the TensorStack SDK add chinese' },
+            { name: 'ANDROIDINFO', lang: 'Kotlin', desc: 'Android Info' },
+            { name: 'esp32-info', lang: 'C', desc: 'ESP32 information' },
+            { name: 'COPG-EXICOK', lang: 'JavaScript', desc: 'Zygisk module for device and CPU spoofing' },
+        ];
+        projectsList.innerHTML = '';
+        const repoCount = document.getElementById('repoCount');
+        const starCount = document.getElementById('starCount');
+        if (repoCount) repoCount.textContent = fallback.length;
+        if (starCount) starCount.textContent = '0';
+
+        fallback.forEach(repo => {
+            const item = document.createElement('a');
+            item.className = 'project-item';
+            item.href = `https://github.com/${GITHUB_USER}/${repo.name}`;
+            item.target = '_blank';
+            item.rel = 'noopener noreferrer';
+            item.innerHTML = `
+                <div class="project-header">
+                    <h3>${repo.name}</h3>
+                    <div class="project-tags"><span>${repo.lang}</span></div>
+                </div>
+                <p>${repo.desc}</p>
+            `;
+            projectsList.appendChild(item);
+        });
+    }
+}
+
+fetchGitHubRepos();
