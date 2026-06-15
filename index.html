@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exicok - 个人主页</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body data-theme="glass">
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bgVideo" preload="auto">
+            <source src="./video/home.mp4?v=2" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">
+                <div class="theme-badge" id="themeBadge">
+                    <div class="badge-icon">
+                        <svg class="icon-glass" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                            <circle cx="12" cy="12" r="4"/>
+                        </svg>
+                        <svg class="icon-md3" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7" rx="1.5"/>
+                            <rect x="14" y="3" width="7" height="7" rx="1.5"/>
+                            <rect x="3" y="14" width="7" height="7" rx="1.5"/>
+                            <rect x="14" y="14" width="7" height="7" rx="1.5"/>
+                        </svg>
+                    </div>
+                    <span class="badge-text" id="badgeText">Glass</span>
+                </div>
+                <span class="logo-text">Exicok</span>
+            </div>
+            <button class="theme-toggle" id="themeToggle" title="切换风格">
+                <span class="material-symbols-outlined">palette</span>
+                <span class="theme-label">MD3</span>
+            </button>
+        </div>
+    </nav>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <div class="glass-card profile-card">
+                <div class="avatar">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-placeholder">E</div>
+                </div>
+                <h1 class="profile-name">Exicok</h1>
+                <p class="profile-title">全栈开发者 / 创意设计师</p>
+                <p class="profile-bio">热爱技术与设计，专注于创造优雅的数字体验</p>
+
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">年经验</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">项目</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">Stars</span>
+                    </div>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/exicok" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                        </svg>
+        
+                    </a>
+                    <a href="mailto:exicok@outlook.com" class="social-icon" title="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </aside>
+
+        <main class="content">
+            <section id="about" class="glass-card content-card">
+                <h2 class="card-title">关于我</h2>
+                <p>1</p>
+                <p>1。</p>
+            </section>
+
+            <section id="skills" class="glass-card content-card">
+                <h2 class="card-title">技能专长</h2>
+                <div class="skills-list">
+                    <div class="skill-item">
+                        <div class="skill-header">
+                            <span class="skill-name">安卓开发</span>
+                            <span class="skill-tech">java /kotlin</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="glass-card content-card">
+                <h2 class="card-title">精选项目</h2>
+                <div class="projects-list">
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>Dashboard Pro</h3>
+                            <div class="project-tags">
+                                <span>React</span>
+                                <span>D3.js</span>
+                                <span>WebSocket</span>
+                            </div>
+                        </div>
+                        <p>现代化数据可视化仪表板，支持实时数据分析和多维度报表展示</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>CloudSync</h3>
+                            <div class="project-tags">
+                                <span>Go</span>
+                                <span>AWS</span>
+                                <span>gRPC</span>
+                            </div>
+                        </div>
+                        <p>企业级云存储解决方案，提供安全可靠的文件同步和协作功能</p>
+                    </div>
+                    <div class="project-item">
+                        <div class="project-header">
+                            <h3>TaskFlow</h3>
+                            <div class="project-tags">
+                                <span>Vue 3</span>
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                            </div>
+                        </div>
+                        <p>智能项目管理工具，集成AI辅助的任务分配和进度追踪系统</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
