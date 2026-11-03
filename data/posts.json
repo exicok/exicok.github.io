@@ -1,0 +1,112 @@
+[
+  {
+    "slug": "hello-exicok-blog",
+    "title": "关于这个博客，以及为什么重新出发",
+    "date": "2026-11-03",
+    "updated": "",
+    "category": "随想",
+    "tags": [
+      "博客",
+      "记录"
+    ],
+    "draft": false,
+    "excerpt": "记录重搭博客的动机与技术取舍，纯静态、无构建框架，为的是能把写作这件小事长久维持下去",
+    "words": 535,
+    "minutes": 1,
+    "headings": 3,
+    "file": "content/posts/hello-exicok-blog.md",
+    "path": "post.html?id=hello-exicok-blog"
+  },
+  {
+    "slug": "markdown-syntax-tour",
+    "title": "本站 Markdown 语法速查",
+    "date": "2026-10-22",
+    "updated": "2026-10-28",
+    "category": "技术",
+    "tags": [
+      "Markdown",
+      "写作",
+      "速查"
+    ],
+    "draft": false,
+    "excerpt": "逐条演示本站解析器支持的全部语法及其渲染效果，写作前对照本文即可避免踩到不支持的写法",
+    "words": 992,
+    "minutes": 3,
+    "headings": 17,
+    "file": "content/posts/markdown-syntax-tour.md",
+    "path": "post.html?id=markdown-syntax-tour"
+  },
+  {
+    "slug": "rust-ownership-notes",
+    "title": "Rust 所有权与借用：一遍读不懂的三句话",
+    "date": "2026-09-14",
+    "updated": "2026-09-20",
+    "category": "技术",
+    "tags": [
+      "Rust",
+      "笔记"
+    ],
+    "draft": false,
+    "excerpt": "把所有权三条规则翻译成更接近直觉的三句话，附一段能编译的例子和一段被编译器拒绝的例子",
+    "words": 547,
+    "minutes": 1,
+    "headings": 5,
+    "file": "content/posts/rust-ownership-notes.md",
+    "path": "post.html?id=rust-ownership-notes"
+  },
+  {
+    "slug": "terminal-workflow-2026",
+    "title": "2026 年的终端工作流：我最终留下的几个工具",
+    "date": "2026-08-05",
+    "updated": "",
+    "category": "技术",
+    "tags": [
+      "CLI",
+      "效率",
+      "工具"
+    ],
+    "draft": false,
+    "excerpt": "几年折腾之后终端里只剩十来件工具，逐个交代留下的理由，并附上仍在生效的别名与配置片段",
+    "words": 497,
+    "minutes": 1,
+    "headings": 5,
+    "file": "content/posts/terminal-workflow-2026.md",
+    "path": "post.html?id=terminal-workflow-2026"
+  },
+  {
+    "slug": "weekend-in-suburbs",
+    "title": "周末去郊区：一次没有计划的短途出行",
+    "date": "2026-06-21",
+    "updated": "",
+    "category": "生活",
+    "tags": [
+      "出行",
+      "摄影"
+    ],
+    "draft": false,
+    "excerpt": "六月中一个临时起意的郊区周末，记下路上的细节、相机器材的取舍和一句记到现在的闲话",
+    "words": 483,
+    "minutes": 1,
+    "headings": 5,
+    "file": "content/posts/weekend-in-suburbs.md",
+    "path": "post.html?id=weekend-in-suburbs"
+  },
+  {
+    "slug": "deep-work-reading-note",
+    "title": "深度工作读书笔记：把注意力当成需要设计的资源",
+    "date": "2026-04-12",
+    "updated": "",
+    "category": "阅读",
+    "tags": [
+      "读书",
+      "专注"
+    ],
+    "draft": false,
+    "excerpt": "实践两周之后哪些观点仍然相信，哪些开始存疑，以及一套我自己定下的三步实施方案",
+    "words": 751,
+    "minutes": 2,
+    "headings": 6,
+    "file": "content/posts/deep-work-reading-note.md",
+    "path": "post.html?id=deep-work-reading-note"
+  }
+]

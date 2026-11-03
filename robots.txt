@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://exicok.github.io/sitemap.xml

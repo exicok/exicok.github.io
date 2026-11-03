@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://exicok.github.io/index.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/archive.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/term.html?type=category</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/term.html?type=tag</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/about.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/search.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/write.html</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://exicok.github.io/404.html</loc><changefreq>never</changefreq></url>
+  <url><loc>https://exicok.github.io/post.html?id=hello-exicok-blog</loc><lastmod>2026-11-03</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://exicok.github.io/post.html?id=markdown-syntax-tour</loc><lastmod>2026-10-28</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://exicok.github.io/post.html?id=rust-ownership-notes</loc><lastmod>2026-09-20</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://exicok.github.io/post.html?id=terminal-workflow-2026</loc><lastmod>2026-08-05</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://exicok.github.io/post.html?id=weekend-in-suburbs</loc><lastmod>2026-06-21</lastmod><changefreq>monthly</changefreq></url>
+  <url><loc>https://exicok.github.io/post.html?id=deep-work-reading-note</loc><lastmod>2026-04-12</lastmod><changefreq>monthly</changefreq></url>
+</urlset>

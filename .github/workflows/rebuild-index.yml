@@ -1,0 +1,44 @@
+name: 重建文章索引
+
+# 只有 content/ 变化时才会触发：自动跑 tools/build.mjs 并把生成的索引提交回 main。
+# 这样即使本地忘记执行构建，线上索引也不会过期。
+on:
+  push:
+    branches: [main]
+    paths:
+      - "content/posts/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rebuild-index-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: 生成索引
+        run: node tools/build.mjs
+
+      - name: 提交索引变更
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/posts.json data/search.json feed.xml sitemap.xml
+          if git diff --cached --quiet; then
+            echo "索引无变化"
+          else
+            git commit -m "chore: 重建文章索引 [skip ci]"
+            git push
+          fi
